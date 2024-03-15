@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Spelling Bee Solution</title>
+</head>
+
+<body>
+
+<table>
+  <tr>
+    <th>Word</th>
+    <th>Pangram?</th>
+  </tr>
+
+{% for word in solution.words %}
+  <tr>
+    <td>{{ word.value }}</td>
+    <td>{% if word.is_pangram %}y{% endif %}</td>
+  </tr>
+{% endfor %}
+</table>
+</body>
+</html>
